@@ -1,7 +1,9 @@
-var http = require('http');
+var app = require('./config/server');
 
-var server = http.createServer(function(req, res){
-	res.end('<html><body>Teste</body></html>')
-});
+var homeRota = require('./app/routes/home')(app);
+var formulario_inclusao_noticiaRota = require('./app/routes/admin/formulario_inclusao_noticia')(app);
+var noticiaRota = require('./app/routes/noticias/noticia')(app);
+var noticiasRota = require('./app/routes/noticias/noticias')(app);
 
-server.listen(3000);
+app.listen(3000);
+
