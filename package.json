@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/iwilliam317/learning-node#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "nodemon": "^1.14.8"
   }
 }
