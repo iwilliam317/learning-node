@@ -22,17 +22,6 @@ module.exports = function(app){
 		});
 	})	
 
-	app.post('/noticias/salvar', function(req, res){
-		var noticia = req.body;
-		//console.log(noticia)
 
-		var connection = app.config.dbConnection();
-		var noticiaModel = new app.app.models.noticiaModel();
-		noticiaModel.salvarNoticia(noticia, connection, function(error, result){
-
-			res.redirect('/noticias')
-		});
-	});
-	
 			
 }
