@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/iwilliam317/learning-node#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "mysql": "^2.15.0",
     "nodemon": "^1.14.8"
   }
 }
