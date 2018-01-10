@@ -3,7 +3,9 @@ module.exports.getNoticia = function(application, req, res){
 	var connection = application.config.dbConnection();
 	var NoticiaDAO = new application.app.models.NoticiaDAO(connection);
 
-	NoticiaDAO.getNoticia(function(error, result){
+	var id_noticia = req.query.id_noticia;
+
+	NoticiaDAO.getNoticia(id_noticia, function(error, result){
 		res.render('noticias/noticia', {noticia : result})
 	});
 }
@@ -24,7 +26,7 @@ module.exports.get5UltimasNoticias = function(application, req, res){
 	var NoticiaDAO = new application.app.models.NoticiaDAO(connection);
 
 	NoticiaDAO.get5UltimasNoticias(function(error, result){
-		console.log(result)
+		//console.log(result)
 		res.render('home/index', {noticias : result})
 	});
 }
