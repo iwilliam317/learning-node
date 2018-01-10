@@ -12,10 +12,10 @@
 ###### Consign
 ###### MySQL
 
-##Running Project
+## Running Project
 
 ###### Open the shell
 ###### Access the directory of the project
 ###### Locate the app.js 
 ###### Run the code below:
-```nodemon app ```
+>>```nodemon app ```
