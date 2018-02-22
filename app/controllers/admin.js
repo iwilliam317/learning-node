@@ -21,8 +21,8 @@ module.exports.salvar_noticia = function(application, req, res){
 
 	else{
 		var connection = app.config.dbConnection();
-		var NoticiaDAO = new app.app.models.NoticiaDAO();
-		NoticiaDAO.salvarNoticia(noticia, connection, function(error, result){
+		var NoticiaDAO = new app.app.models.NoticiaDAO(connection);
+		NoticiaDAO.salvarNoticia(noticia, function(error, result){
 
 			res.redirect('/noticias')
 		});
